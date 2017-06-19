@@ -93,9 +93,9 @@ document.addEventListener('DOMContentLoaded', function () {
     for (i = 0; i <= tablerow.length; i++) {
       var rowvalue = tablerow[i];
       //console.log(rowvalue);
-      if (rowvalue.toString() === CrossesWinningCombo.toString()) {
+      if (rowvalue === CrossesWinningCombo.toString()) {
         Player1Output();
-      } else if (rowvalue.toString() === NoughtsWinningCombo.toString()) {
+      } else if (rowvalue === NoughtsWinningCombo.toString()) {
         Player2Output();
       } else {
         null;
@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function () {
     $("#resultmessage").html("Player1 wins");
     player1ScoreCount++;
     let theScore = document.getElementById("Player1count").innerHTML = player1ScoreCount;
-    console.log(player1ScoreCount);
+    //console.log(player1ScoreCount);
     resetTheBoard();
   }
   //A function that perform actions if the player2 wins
@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function () {
     $("#resultmessage").html("Player2 wins");
     player2ScoreCount++;
     let theScore = document.getElementById("Player2count").innerHTML = player2ScoreCount;
-    console.log(player2ScoreCount);
+    //console.log(player2ScoreCount);
     resetTheBoard();
   }
   //function if the match is a draw
@@ -133,6 +133,6 @@ document.addEventListener('DOMContentLoaded', function () {
   function resetTheBoard() {
     $("#NandC tbody tr td").html("");
     counter = 0;
-    console.log(counter);
+    //console.log(counter);
   }
 });
